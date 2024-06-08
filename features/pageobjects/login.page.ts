@@ -1,22 +1,10 @@
-// import { $ } from '@wdio/globals'
 import Page from './page';
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
 class LoginPage extends Page {
     public get alertMessage() {
         return $(`[data-test="error"]`);
     }
-    public get inputUsername () {
-        return $("#user-name");
-    }
-
-    public get inputPassword () {
-        return $("#password");
-    }
-
-    public get btnSubmit () {
+    public get btnSubmit() {
         return $("#login-button");
     }
     public async btnSubmitClick() {
@@ -25,14 +13,7 @@ class LoginPage extends Page {
     public async getTextErrorMessage() {
         return (await this.alertMessage).getText();
     }
-
-    public async login (username: string, password: string) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
-    }
-
-    public open () {
+    public open() {
         return super.open();
     }
 }
