@@ -12,7 +12,7 @@ When('User click "Login" button', async () => {
 });
 
 Then('User should see "Epic sadface: Username is required" error message', async () => {
-   const errorMessage = await loginPage.getTextErrorMessage();
+    const errorMessage = await loginPage.getTextErrorMessage();
     await expect(errorMessage).toEqual(ERROR_MESSAGE);
 });
 
