@@ -1,17 +1,17 @@
 import Page from './page';
 
 class LoginPage extends Page {
-    public get alertMessage() {
+    public get errorMessage() {
         return $(`[data-test="error"]`);
     }
-    public get btnSubmit() {
+    public get loginButton() {
         return $("#login-button");
     }
-    public async btnSubmitClick() {
-        await this.btnSubmit.click();
+    public async loginButtonClick() {
+        await this.loginButton.click();
     }
-    public async getTextErrorMessage() {
-        return (await this.alertMessage).getText();
+    public async textErrorMessage() {
+        return (await this.errorMessage).getText();
     }
     public open() {
         return super.open();
