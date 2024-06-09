@@ -13,7 +13,7 @@ export const config: Options.Testrunner = {
             transpileOnly: true
         }
     },
-    
+
     //
     // ==================
     // Specify Test Files
@@ -118,7 +118,7 @@ export const config: Options.Testrunner = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'cucumber',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -137,7 +137,7 @@ export const config: Options.Testrunner = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.ts'],
+        require: ['./features/step-definitions/login_steps.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -283,7 +283,7 @@ export const config: Options.Testrunner = {
      */
     // afterFeature: function (uri, feature) {
     // },
-    
+
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {string} commandName hook command name
