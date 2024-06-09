@@ -11,7 +11,8 @@ class LoginPage extends Page {
     await this.loginButton.click();
   }
   public async textErrorMessage() {
-    return (await this.errorMessage).getText();
+    const textMessage = await this.errorMessage;
+    return textMessage.getText();
   }
   public open() {
     return super.open();
